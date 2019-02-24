@@ -1,0 +1,31 @@
+<document>
+    <listTemplate>
+        <background>
+            <heroImg src="http://portal.chmi.cz/files/portal/docs/meteo/kam/data_{{ camera.file }}/{{ image }}"></heroImg>
+        </background>
+        <list style="width: 400;">
+            <header>
+                <title>{{ camera.name }}</title>
+                <subtitle>{{ camera.vyska }} m n.m.</subtitle>
+                <subtitle>{{ image }}</subtitle>
+            </header>
+            <section>
+                <listItemLockup data-href-page="fullscreen" data-href-page-options="{{toJSON camera.meteograf }}">
+                    <title>Meteograf</title>
+                </listItemLockup>
+                <listItemLockup>
+                    <title>Jiný čas</title>
+                </listItemLockup>
+                <listItemLockup>
+                    <title>Animovat</title>
+                </listItemLockup>
+            </section>
+            <relatedContent>
+                <lockup style="width: 1440; height: 1080; margin: 0;">
+                    <img src="http://portal.chmi.cz/files/portal/docs/meteo/kam/data_{{ camera.file }}/{{ image }}"
+                        style="width: 1440; height: 1080;" />
+                </lockup>
+            </relatedContent>
+        </list>
+    </listTemplate>
+</document>

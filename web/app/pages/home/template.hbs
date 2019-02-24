@@ -1,0 +1,33 @@
+<document>
+   <catalogTemplate>
+    <background>
+    </background>
+      <banner>
+         <title>ČHMÚ Kamery</title>
+      </banner>
+      <list>
+         <section>
+            {{#each list }}
+            <listItemLockup>
+               <title>{{ name }}</title>
+               <decorationLabel>6</decorationLabel>
+               <relatedContent>
+                  <grid>
+                     <section>
+                        {{#each webcams}}
+                        <lockup data-href-page="camera" data-href-page-options="{{toJSON this }}">
+                            <overlay style="padding:0;">
+                                <title style="tv-position: center; tv-text-style: title3;">{{ name }}</title>
+                            </overlay>
+                            <img style="tv-tint-color: rgba(0,0,0,0.3);" src="http://portal.chmi.cz/files/portal/docs/meteo/kam/{{ file }}.jpg" width="530" height="340"/>
+                        </lockup>
+                        {{/each}}
+                     </section>
+                  </grid>
+               </relatedContent>
+            </listItemLockup>
+            {{/each}}
+         </section>
+      </list>
+   </catalogTemplate>
+</document>
