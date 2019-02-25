@@ -23,11 +23,11 @@ ATV.start({
       name: 'Kamery',
       page: HomePage,
       attributes: { autoHighlight: true, reloadOnSelect: true }
-    }, {
+    } /** , {
       id: 'search',
       name: 'O aplikaci',
       page: SearchPage
-    }]
+    } */]
   },
   templates: {
     loader: loaderTpl,
