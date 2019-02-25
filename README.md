@@ -3,6 +3,12 @@ Aplikace pro sledování webových kamer ze stránek ČHMÚ. Postavena s použit
 
 Problémy hlašte v Issues.
 
+### Struktura projektu
+Projekt je rozdělený do 2 částí
+
+- native: tato složka obsahuje Xcode projekt. Soubor AppDelegate.swift se stará o nastavení TVMLKit frameworku a spuštění JavaScriptové aplikace. Nativní část se měnit nebude, výhoda pro uživatele je tedy, že aplikaci bude muset zkompilovat jen jednou.
+
+- web/app: tato složka obsahuje JavaScript část zdrojových souborů aplikace. Po spuštění `npm run dist` se vytvoří složka web/dist, která v sobě obsahuje zabalenou JS část aplikace. Tato složka běží na webovém serveru a načítá se při každém spuštění aplikace na Apple TV.
 
 ### Jak začít s vývojem
 
