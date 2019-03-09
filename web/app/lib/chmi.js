@@ -43,11 +43,17 @@ const categorizeWebcams = (webcams) => {
     'U': { 'name': 'Ústecký', 'webcams': [] },
     'Z': { 'name': 'Zlínský', 'webcams': [] }
   }
+  // Sorts webcams by province
   webcams.forEach(function (obj) {
     let kraj = obj.kraj
     finalList[kraj].webcams.push(obj)
   })
+  // Counts webcams in each province
+  Object.entries(finalList).forEach(([key, kraj]) => {
+    kraj.webcamCount = kraj.webcams.length
+  })
   // console.log(finalList);
+  console.log(finalList);
   return finalList
 }
 
@@ -140,7 +146,6 @@ const xhrOptions = (params) => {
 }
 
 export default {
-  xhrOptions,
   getWebcams,
   getImages
 }
