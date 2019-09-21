@@ -4,7 +4,7 @@ import template from './template.hbs'
 
 import API from '../../lib/chmi.js'
 
-let config = {
+export let config = {
   name: 'home',
   template: template,
   ready (options, resolve, reject) {
@@ -30,6 +30,6 @@ let config = {
   }
 }
 
-const HomePage = ATV.Page.create(config)
+export const HomePage = ATV.Page.create(config)
 
-export default HomePage
+// export default HomePage

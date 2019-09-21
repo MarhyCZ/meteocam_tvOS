@@ -10,10 +10,13 @@ import loaderTpl from 'shared/templates/loader.hbs'
 import errorTpl from 'shared/templates/error.hbs'
 
 // pages
-import HomePage from 'pages/home'
+import { config as HomePageConfig, HomePage } from 'pages/home'
 import CameraPage from 'pages/camera'
 import SearchPage from 'pages/search'
 import FullscreenPage from 'pages/fullscreen'
+
+
+import DOCS from 'lib/docshelper.js'
 
 ATV.start({
   style: css,
@@ -57,5 +60,7 @@ ATV.start({
   onResume (options) {
     // ATV.Navigation.clear()
     // ATV.Navigation.navigateToMenuPage()
+    ATV.Navigation.removeActiveDocument()
+    ATV.Navigation.navigate('home', HomePageConfig, true)
   }
 })
